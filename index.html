@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yets Tech Hub - Inspiring the Future of Tech </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+  <link rel="icon" type="image/png" href="Logo.PNG">
+  
+</head>
+<style>
+   .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.contact-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  margin-right: 30px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.but {
+  background-color: #0070ba;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.but:hover {
+  background-color: #005fa0;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-image,
+  .contact-form {
+    flex: auto;
+    padding: 20px;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+  }
+}
+.contact-description {
+      text-align: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color: #555;
+    }
+    .contact {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .call-button,
+  .whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .call-button a,
+  .whatsapp-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0070ba;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .call-button a:hover,
+  .whatsapp-button a:hover {
+    background-color: #005fa0;
+  }
+
+  .call-button i,
+  .whatsapp-button i {
+    margin-right: 5px;
+  }
+  .animated-heading {
+  position: relative;
+}
+
+.animated-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff5e3a;
+  transition: width 0.3s ease;
+  border-radius: 30px;
+}
+
+.animated-heading:hover::after {
+  width: 100%;
+}
+
+ </style>
+<body>
+  <header>
+    <nav>'
+      <div class="logo">
+          <img src="Logo.png" alt="Yets Tech Hub Logo">
+        </div>
+      <div class="container">
+        
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="container">
+        <h1 style="color: #555; background-color: whitesmoke; border-radius: 30px; ">Yets Tech Hub</h1>
+        <p style="color: #555; background-color: whitesmoke; border-radius: 30px; ">Inspiring the Future of Tech</p>
+        <br>
+        <br>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="animated-heading">About Us</h2>
+      <p>
+        Yets Tech Hub is a startup company that focuses on empowering innovation by providing cutting-edge technology solutions to businesses of all sizes. We believe that technology is the driving force behind success in the modern business landscape, and our mission is to enable organizations to leverage the latest advancements to stay ahead of the competition.
+      </p>
+      <p>
+        Our team of experienced professionals is dedicated to delivering tailored solutions that address the unique needs of each client. From web and mobile app development to artificial intelligence and data analytics, we offer a comprehensive range of services to help businesses thrive in the digital age.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service">
+        <img src="images/4.jpg" alt="Service 1">
+        <h3>Web Development</h3>
+        <p>Yets Tech Hub offers web development services to help businesses of all sizes create and maintain effective websites.
+
+          Our team of experienced web developers can build custom websites that meet your specific needs and requirements. We use the latest web development technologies to create websites that are both visually appealing and functional.</p>
+          We also offer a range of web development services, including:
+
+          <ul>
+            <li>Website design</li>
+            <li>Website development</li>
+            <li>Website maintenance</li>
+            <li>Website hosting</li>
+            <li>Website security</li>
+            <li>Website optimization</ul>
+        </div>
+    
+    
+      <div class="service">
+        <img src="images/3.jpg" alt="Service 2">
+        <h3>Mobile App Development</h3>
+        <p>
+         Yets Tech Hub offers mobile app development services to help businesses of all sizes create and deploy effective mobile apps.
+          
+          Our team of experienced mobile app developers can build custom mobile apps that meet your specific needs and requirements. We use the latest mobile app development technologies to create apps that are both visually appealing and functional.
+          
+          <p>We offer mobile app development services, including:</p>
+          <ul>
+         <li> Mobile app design</li>
+          <li>Mobile app development</li>
+          <li>Mobile app testing</li>
+          <li>Mobile app deployment</li>
+          <li>Mobile app maintenance</li>
+          <li>Mobile app marketing</ul></p>
+      </div>
+      
+      
+      <div class="service">
+        <img src="images/car.jpg" alt="Service 3">
+        <h3>Graphics Designing</h3>
+        <p>Yets Tech Hub offers graphic design services to help businesses create a strong visual identity.</p>
+
+         <p> Our team of talented designers can create logos, illustrations, icons, user interfaces, social media graphics, ads, presentations, and more. We work closely with our clients to understand their needs and goals, and then create custom designs that are both visually appealing and effective in communicating the company's message.</p>
+          
+          <p>We are up-to-date on the latest trends in graphic design, so we can create designs that are both stylish and timeless.</p>
+          
+          <p>If you are looking for a team of talented graphic designers to help you create a strong visual identity for your business, then contact Yets Tech Hub today.</p>
+      </div>
+      
+      
+      <div class="service">
+        <img src="images/m (1).jpg" alt="Service 4">
+        <h3>Digital Marketing</h3>
+        <p>Yets Tech Hub offers digital marketing services to help businesses of all sizes reach their target audience and achieve their marketing goals.
+
+          Our team of experienced digital marketers can help you with a variety of digital marketing tasks, including:
+          
+          <li>Search engine optimization (SEO): We improve your website's ranking in search engine results pages (SERPs).</li>
+          <li>Social media marketing: We create and manage social media accounts for your business to build brand awareness and engage with your audience.</li>
+          <li>Content marketing: We create and distribute content that is relevant to your target audience to attract and retain customers.</li>
+          </p>
+      </div>
+    </div>
+  </section>
+  <div class="contact">
+    <h3>Contact Us</h3>
+  <p>Would you love to work with Us on your next technology project!. <br>Fill out the form below and we'll get back to you as soon as possible.</p>
+</div>
+  <div class="contact-container">
+    <div class="contact-image">
+      <img src="images/m (4).jpg" alt="Contact Image">
+    </div>
+    <div class="contact-form">
+      <h1>Contact Us</h1>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" placeholder="Enter your message" required></textarea>
+        </div>
+        <a class="but" href="mailto:mumberederic@gmail.com"> Send Message</a>
+
+      </form>
+    </div>
+  </div>
+
+ 
+<script src="script.js">function validateForm() {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('message').value;
+
+  // Simple validation to check if the required fields are filled
+  if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+    alert('Please fill in all the required fields.');
+    return false;
+  }
+
+  // Add your additional validation logic here if needed
+
+  // If form is valid, proceed with form submission
+  alert('Thank you for contacting Yets Tech Hub! We will get back to you soon.');
+  return true;
+}
+
+// Event listener for form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // Call the validateForm function to perform form validation
+  if (validateForm()) {
+    // If form is valid, you can proceed with submitting the form
+    // Here, you can add your code to send the form data to your desired destination (e.g., via AJAX or redirect to another page)
+    document.getElementById('contact-form').reset(); // Optional: Reset the form after successful submission
+  }
+});
+</script>
+    <br>
+    <div class="call-button">
+      <a href="tel:+256780157449"><i class="fas fa-phone"></i>Call Us</a>
+    </div>
+  
+    <div class="whatsapp-button">
+      <a href="https://wa.me/+256780157449"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+    </div>
+    <br>
+      <footer>
+  <div class="container">
+    <ul class="social-links">
+      <li>
+        <a href="tel:+256780157449" target="blank"><i class="fab fa-whatsapp"></i></a></li>
+      <li><a href="#" target="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+      <p>&copy; 2023 <a href="https://www.yetstechhub.unaux.com" target="_blank">Yets Tech Hub</a>. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
