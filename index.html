@@ -2,355 +2,751 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yets Tech Hub - Inspiring the Future of Tech </title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-  <link rel="icon" type="image/png" href="Logo.PNG">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YetsTechHub256 | IT Specialist & Networking Expert</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Fira+Code:500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #f6f8fa;
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #222;
+      overflow-x: hidden;
+    }
+    .menu-header-bg {
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80') center/cover, linear-gradient(90deg,#0d6efd 0%,#24292e 100%);
+      min-height: 60vh;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .menu-header-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(13,110,253,0.65);
+      z-index: 0;
+      min-height: 60vh;
+    }
+    .navbar {
+      background: transparent;
+      box-shadow: none;
+      padding: 0.7rem 0;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    .navbar-brand {
+      font-family: 'Fira Code', monospace;
+      font-weight: 700;
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: #fff !important;
+      transition: font-size 0.18s;
+    }
+    .navbar-brand img {
+      height: 72px;
+      width: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 18px rgba(13,110,253,0.19);
+      border: 3px solid #fff;
+      background: #fff;
+      transition: transform 0.2s, height 0.18s, width 0.18s;
+    }
+    .navbar-brand img:hover {
+      transform: scale(1.1);
+    }
+    .navbar-brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.1;
+    }
+    .navbar-brand-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .navbar-brand-tagline {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #ffc107;
+      margin-top: -0.18em;
+    }
+    .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+      font-size: 1.18rem;
+      margin: 0 0.7rem;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-bottom 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #ffc107 !important;
+      border-bottom: 2.5px solid #ffc107;
+    }
+    .navbar-toggler {
+      border: none;
+      background: rgba(255,255,255,0.22);
+      color: #fff;
+      font-size: 2rem;
+      z-index: 2;
+      transition: font-size 0.18s;
+    }
+    .navbar-toggler:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    .navbar-mobile-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .navbar-brand-mobile {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .navbar-brand-mobile .navbar-brand-text {
+      line-height: 1.1;
+    }
+    .navbar-brand-mobile .navbar-brand-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .navbar-brand-mobile .navbar-brand-tagline {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #ffc107;
+      margin-top: -0.15em;
+    }
+    header {
+      background: transparent;
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 0 1.3rem;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+      min-height: 20vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      text-shadow: 0 3px 18px rgba(0,0,0,0.11);
+      transition: font-size 0.18s;
+    }
+    header p { font-size: 1.1rem; margin-bottom: 0; font-weight: 400; text-shadow: 0 2px 10px rgba(13,110,253,0.11);}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: visible;
+    }
+    .section-title {
+      color: #0d6efd;
+      font-weight: 700;
+      margin-bottom: 1.3rem;
+      font-size: 1.3rem;
+      letter-spacing: 0.01em;
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 0.4rem;
+      text-align: left;
+    }
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 2.2rem 0;
+      flex-wrap: wrap;
+    }
+    .about-text {
+      flex: 1 1 300px;
+      font-size: 1.13rem;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+      min-width: 0;
+    }
+    .about-image {
+      flex: 1 1 230px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-width: 0;
+      max-width: 100vw;
+    }
+    .about-image img {
+      width: 350px;
+      max-width: 100vw;
+      height: auto;
+      border-radius: 22px;
+      border: 7px solid #0d6efd;
+      box-shadow: 0 2px 22px rgba(13,110,253,0.13);
+      background: #fff;
+      box-sizing: border-box;
+      outline: 7px solid #fff;
+      outline-offset: -7px;
+      margin: 0 auto;
+      display: block;
+    }
+    .services-bg {
+      background: linear-gradient(135deg,#e6f0ff 40%, #f6f8fa 100%);
+      padding: 2rem 0 1.5rem 0;
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      box-sizing: border-box;
+      overflow-x: visible;
+    }
+    .row.g-4 {
+      --bs-gutter-x: 2rem !important;
+      --bs-gutter-y: 1.3rem !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .service-card {
+      border-radius: 22px;
+      box-shadow: 0 2px 16px rgba(13,110,253,0.13);
+      border: none;
+      min-height: 250px;
+      background: #fff;
+      padding-bottom: 1rem;
+      margin-bottom: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      overflow: hidden;
+    }
+    .card-img-top.circle-img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      margin-top: 1rem;
+      margin-bottom: 0.7rem;
+      border-radius: 50%;
+      border: 4px solid #0d6efd;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(13,110,253,0.11);
+      padding: 0.3rem;
+      display: block;
+    }
+    .card-title {
+      font-size: 1.18rem;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+      color: #24292e;
+      text-align: center;
+    }
+    .card-text {
+      font-size: 1.05rem;
+      color: #444;
+      flex: 1;
+      text-align: center;
+      padding: 0 0.3rem;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.8rem;
+      justify-content: center;
+    }
+    .skill {
+      background: #e1e4e8;
+      padding: 0.7rem 1.2rem;
+      border-radius: 18px;
+      font-size: 1.07rem;
+      font-weight: 500;
+      color: #0d6efd;
+      box-shadow: 0 1px 3px rgba(27,31,35,0.07);
+      font-family: 'Fira Code', monospace;
+      margin-bottom: 0.4rem;
+      white-space: nowrap;
+    }
+    .contact-info {
+      font-size: 1.09rem;
+      margin-bottom: 1.3rem;
+      color: #333;
+      text-align: center;
+    }
+    .social-links {
+      margin: 1.2rem 0 1.2rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin-bottom: 0.2rem;
+      transition: transform 0.18s, box-shadow 0.18s;
+      background: #fff;
+      position: relative;
+      box-shadow: 0 2px 12px rgba(27,31,35,0.13);
+      border: none;
+      text-decoration: none !important;
+    }
+    .social-link:hover {
+      transform: scale(1.16);
+      box-shadow: 0 8px 28px rgba(13,110,253,0.17);
+      text-decoration: none !important;
+    }
+    .social-link.phone { background: #34b7f1; color: #fff; }
+    .social-link.whatsapp { background: #25D366; color: #fff; }
+    .social-link.tiktok { background: #111; color: #fff; }
+    .social-link.linkedin { background: #0077b5; color: #fff; }
+    .social-link.gmail { background: #fff; color: #fff; border: 1px solid #D44638;}
+    .social-link.phone:hover { background: #0288d1; }
+    .social-link.whatsapp:hover { background: #128c7e; }
+    .social-link.tiktok:hover { background: #222; }
+    .social-link.linkedin:hover { background: #005983; }
+    .social-link.gmail:hover { background: #e6e6e6; }
+    .social-link i { font-size: 2rem; }
+    .social-link .gmail-img {
+      width: 32px;
+      height: 32px;
+      display: block;
+      border-radius: 50%;
+      background: transparent;
+      margin: 0 auto;
+    }
+    footer {
+      width: 100%;
+      background: #24292e;
+      color: #fff;
+      padding: 1.6rem 0 1.1rem 0;
+      font-size: 1.09rem;
+      border-top: 4px solid #0d6efd;
+      margin-top: 2.2rem;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      letter-spacing: 0.01em;
+      box-shadow: 0 -2px 12px rgba(13,110,253,0.11);
+    }
+    footer span {
+      display: block;
+      margin-top: 0.4rem;
+      font-family:'Fira Code',monospace;
+      color:#0d6efd;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 991px) {
+      .container {
+        max-width: 98vw;
+        padding: 0 0.5rem;
+      }
+      .about-section {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+      }
+      .about-image img {
+        width: 90vw;
+        max-width: 340px;
+        border-radius: 18px;
+      }
+      .service-card {
+        min-height: 200px;
+        padding-bottom: 0.8rem;
+        margin-bottom: 0.9rem;
+      }
+      .card-img-top.circle-img {
+        width: 52px;
+        height: 52px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.4rem;
+        border-width: 3px;
+      }
+      .social-link {
+        width: 38px;
+        height: 38px;
+        font-size: 1.45rem;
+      }
+      .social-link i, .social-link .gmail-img {
+        font-size: 1.3rem;
+        width: 24px;
+        height: 24px;
+      }
+      header h1 { font-size: 2rem; }
+      .navbar-brand { font-size: 2rem; }
+      .navbar-brand img { height: 52px; width: 52px; }
+      .navbar-mobile-row { gap: 0.5rem; }
+      .navbar-brand-mobile .navbar-brand-title { font-size: 1rem;}
+      .navbar-brand-mobile .navbar-brand-tagline { font-size: 0.65rem;}
+    }
+    @media (max-width: 600px) {
+      .container {
+        max-width: 100vw;
+        padding: 0 0.2rem;
+      }
+      .menu-header-bg {
+        min-height: 40vh;
+      }
+      .about-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1.2rem 0;
+      }
+      .about-image img {
+        width: 96vw;
+        max-width: 98vw;
+        min-width: 120px;
+        border-radius: 14px;
+      }
+      .service-card {
+        min-height: 160px;
+        margin-bottom: 0.6rem;
+        border-radius: 16px;
+        padding-bottom: 0.5rem;
+      }
+      .card-img-top.circle-img {
+        width: 38px;
+        height: 38px;
+        margin-top: 0.3rem;
+        margin-bottom: 0.2rem;
+        border-width: 2px;
+        padding: 0.1rem;
+      }
+      .skills {
+        gap: 0.3rem;
+        font-size: 0.89rem;
+      }
+      .skill {
+        padding: 0.3rem 0.6rem;
+        border-radius: 13px;
+        font-size: 0.89rem;
+      }
+      .section-title {
+        font-size: 1.02rem;
+        padding-bottom: 0.22rem;
+        margin-bottom: 0.7rem;
+      }
+      header h1 { font-size: 1.1rem; }
+      header p { font-size: 0.8rem; }
+      .navbar-brand { font-size: 1.2rem; }
+      .navbar-brand img { height: 34px; width: 34px; }
+      .navbar-mobile-row { gap: 0.3rem; }
+      .navbar-brand-mobile .navbar-brand-title { font-size: 0.8rem;}
+      .navbar-brand-mobile .navbar-brand-tagline { font-size: 0.49rem;}
+    }
+  </style>
 </head>
-<style>
-   .contact-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.contact-image {
-  flex: 1;
-  padding: 20px;
-}
-
-.contact-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-.contact-form {
-  flex: 1;
-  padding: 20px;
-  background-color: #f5f5f5;
-  margin-right: 30px;
-}
-
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 10px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.but {
-  background-color: #0070ba;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.but:hover {
-  background-color: #005fa0;
-}
-
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .contact-image,
-  .contact-form {
-    flex: auto;
-    padding: 20px;
-  }
-
-  .contact-image img {
-    max-width: 100%;
-  }
-}
-.contact-description {
-      text-align: center;
-      padding: 20px;
-      background-color: #f5f5f5;
-      color: #555;
-    }
-    .contact {
-      margin-top: 30px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .call-button,
-  .whatsapp-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .call-button a,
-  .whatsapp-button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0070ba;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-
-  .call-button a:hover,
-  .whatsapp-button a:hover {
-    background-color: #005fa0;
-  }
-
-  .call-button i,
-  .whatsapp-button i {
-    margin-right: 5px;
-  }
-  .animated-heading {
-  position: relative;
-}
-
-.animated-heading::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ff5e3a;
-  transition: width 0.3s ease;
-  border-radius: 30px;
-}
-
-.animated-heading:hover::after {
-  width: 100%;
-}
-
- </style>
 <body>
-  <header>
-    <nav>'
-      <div class="logo">
-          <img src="Logo.PNG" alt="Yets Tech Hub Logo">
-        </div>
+  <div class="menu-header-bg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <!-- Mobile flex row for brand/toggle with tagline -->
+        <div class="navbar-mobile-row d-lg-none">
+          <a class="navbar-brand navbar-brand-mobile" href="#">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjX15qPYzrGOK1PsUlUegly0AOD0Ot0kJGHSN2bsMYv40rBr64A=w72-h72-p-rp-mo-br100" alt="Company Logo" />
+            <span class="navbar-brand-text">
+              <span class="navbar-brand-title">YetsTechHub</span>
+              <span class="navbar-brand-tagline">Inspiring the Future Of Tech</span>
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fas fa-bars"></i></span>
+          </button>
+        </div>
+        <!-- Desktop: brand on left, toggle hidden, tagline included -->
+        <a class="navbar-brand d-none d-lg-flex" href="#">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjX15qPYzrGOK1PsUlUegly0AOD0Ot0kJGHSN2bsMYv40rBr64A=w72-h72-p-rp-mo-br100" alt="Company Logo" />
+          <span class="navbar-brand-text">
+            <span class="navbar-brand-title">YetsTechHub</span>
+            <span class="navbar-brand-tagline">Inspiring the Future Of Tech</span>
+          </span>
+        </a>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <div class="hero">
-      <div class="container">
-        <h1 style="color: #555; background-color: whitesmoke; border-radius: 30px; ">Yets Tech Hub</h1>
-        <p style="color: #555; background-color: whitesmoke; border-radius: 30px; ">Inspiring the Future of Tech</p>
-        <br>
-        <br>
-        <a href="#contact" class="btn">Get in Touch</a>
-      </div>
-    </div>
-  </header>
-
-  <section id="about">
-    <div class="container">
-      <h2 class="animated-heading">About Us</h2>
-      <p>
-        Yets Tech Hub is a startup company that focuses on empowering innovation by providing cutting-edge technology solutions to businesses of all sizes. We believe that technology is the driving force behind success in the modern business landscape, and our mission is to enable organizations to leverage the latest advancements to stay ahead of the competition.
-      </p>
-      <p>
-        Our team of experienced professionals is dedicated to delivering tailored solutions that address the unique needs of each client. From web and mobile app development to artificial intelligence and data analytics, we offer a comprehensive range of services to help businesses thrive in the digital age.
-      </p>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service">
-        <img src="images/4.jpg" alt="Service 1">
-        <h3>Web Development</h3>
-        <p>Yets Tech Hub offers web development services to help businesses of all sizes create and maintain effective websites.
-
-          Our team of experienced web developers can build custom websites that meet your specific needs and requirements. We use the latest web development technologies to create websites that are both visually appealing and functional.</p>
-          We also offer a range of web development services, including:
-
-          <ul>
-            <li>Website design</li>
-            <li>Website development</li>
-            <li>Website maintenance</li>
-            <li>Website hosting</li>
-            <li>Website security</li>
-            <li>Website optimization</ul>
-        </div>
-    
-    
-      <div class="service">
-        <img src="images/3.jpg" alt="Service 2">
-        <h3>Mobile App Development</h3>
-        <p>
-         Yets Tech Hub offers mobile app development services to help businesses of all sizes create and deploy effective mobile apps.
-          
-          Our team of experienced mobile app developers can build custom mobile apps that meet your specific needs and requirements. We use the latest mobile app development technologies to create apps that are both visually appealing and functional.
-          
-          <p>We offer mobile app development services, including:</p>
-          <ul>
-         <li> Mobile app design</li>
-          <li>Mobile app development</li>
-          <li>Mobile app testing</li>
-          <li>Mobile app deployment</li>
-          <li>Mobile app maintenance</li>
-          <li>Mobile app marketing</ul></p>
-      </div>
-      
-      
-      <div class="service">
-        <img src="images/car.jpg" alt="Service 3">
-        <h3>Graphics Designing</h3>
-        <p>Yets Tech Hub offers graphic design services to help businesses create a strong visual identity.</p>
-
-         <p> Our team of talented designers can create logos, illustrations, icons, user interfaces, social media graphics, ads, presentations, and more. We work closely with our clients to understand their needs and goals, and then create custom designs that are both visually appealing and effective in communicating the company's message.</p>
-          
-          <p>We are up-to-date on the latest trends in graphic design, so we can create designs that are both stylish and timeless.</p>
-          
-          <p>If you are looking for a team of talented graphic designers to help you create a strong visual identity for your business, then contact Yets Tech Hub today.</p>
-      </div>
-      
-      
-      <div class="service">
-        <img src="images/m (1).jpg" alt="Service 4">
-        <h3>Digital Marketing</h3>
-        <p>Yets Tech Hub offers digital marketing services to help businesses of all sizes reach their target audience and achieve their marketing goals.
-
-          Our team of experienced digital marketers can help you with a variety of digital marketing tasks, including:
-          
-          <li>Search engine optimization (SEO): We improve your website's ranking in search engine results pages (SERPs).</li>
-          <li>Social media marketing: We create and manage social media accounts for your business to build brand awareness and engage with your audience.</li>
-          <li>Content marketing: We create and distribute content that is relevant to your target audience to attract and retain customers.</li>
-          </p>
-      </div>
-    </div>
-  </section>
-  <div class="contact">
-    <h3>Contact Us</h3>
-  <p>Would you love to work with Us on your next technology project!. <br>Fill out the form below and we'll get back to you as soon as possible.</p>
-</div>
-  <div class="contact-container">
-    <div class="contact-image">
-      <img src="images/m (4).jpg" alt="Contact Image">
-    </div>
-    <div class="contact-form">
-      <h1>Contact Us</h1>
-      <form>
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Enter your name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" placeholder="Enter your message" required></textarea>
-        </div>
-        <a class="but" href="mailto:mumberederic@gmail.com"> Send Message</a>
-
-      </form>
-    </div>
+    <header>
+      <h1>YetsTechHub256</h1>
+      <p>IT Specialist · Networking Expert · Developer · Solutions Architect</p>
+    </header>
   </div>
-
- 
-<script src="script.js">function validateForm() {
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var message = document.getElementById('message').value;
-
-  // Simple validation to check if the required fields are filled
-  if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-    alert('Please fill in all the required fields.');
-    return false;
-  }
-
-  // Add your additional validation logic here if needed
-
-  // If form is valid, proceed with form submission
-  alert('Thank you for contacting Yets Tech Hub! We will get back to you soon.');
-  return true;
-}
-
-// Event listener for form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
-
-  // Call the validateForm function to perform form validation
-  if (validateForm()) {
-    // If form is valid, you can proceed with submitting the form
-    // Here, you can add your code to send the form data to your desired destination (e.g., via AJAX or redirect to another page)
-    document.getElementById('contact-form').reset(); // Optional: Reset the form after successful submission
-  }
-});
-</script>
-    <br>
-    <div class="call-button">
-      <a href="tel:+256780157449"><i class="fas fa-phone"></i>Call Us</a>
-    </div>
-  
-    <div class="whatsapp-button">
-      <a href="https://wa.me/+256780157449"><i class="fab fa-whatsapp"></i>WhatsApp</a>
-    </div>
-    <br>
-      <footer>
-  <div class="container">
-    <ul class="social-links">
-      <li>
-        <a href="tel:+256780157449" target="blank"><i class="fab fa-whatsapp"></i></a></li>
-      <li><a href="https://www.facebook.com/jackdamian.dericyats/" target="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href="https://twitter.com/DjYets" target="_blank"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="https://www.tiktok.com/@yetsdjug" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-      <li><a href="https://www.instagram.com/yetsdj/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/mumbere-deric-403273280/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-    </ul>
-    <ul class="footer-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- Accessibility Widget placed before About Me section -->
+  <script src="https://cdn.userway.org/widget.js" data-account="j3NChVDdc0"></script>
+  <div class="container mt-4">
+    <section id="about">
+      <div class="section-title">About Me</div>
+      <div class="about-section">
+        <div class="about-text">
+          Hi! I'm <b>YetsTechHub256</b>, a passionate IT specialist and developer, skilled in building scalable, secure, and modern digital solutions.<br>
+          I specialize in networking, systems administration, cloud, web & mobile development, data backup/recovery, cyber security, graphics, and business automation. My focus is on real-world impact, accessibility, and beautiful UI/UX.<br>
+          <br>
+          <span style="color:#0d6efd;font-weight:600;">Let's build the future of IT together!</span>
+        </div>
+        <div class="about-image">
+          <img src="https://i.ibb.co/4YZXKqk/deric-profile.jpg" alt="Deric Mumbere Profile" />
+        </div>
+      </div>
+    </section>
+    <section id="services" class="services-bg">
+      <div class="section-title">Services</div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Networking & Infrastructure -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/networkx/networkx-original.svg" class="card-img-top circle-img" alt="Networking" />
+            <div class="card-body">
+              <h5 class="card-title">Networking & Infrastructure</h5>
+              <p class="card-text">Design, configure, and secure networks (LAN/WAN, Wi-Fi, VPN, Firewalls, Switches). Cisco, MikroTik, Ubiquiti, SDN.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Systems Administration -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/256/console.png" class="card-img-top circle-img" alt="Systems Admin" />
+            <div class="card-body">
+              <h5 class="card-title">Systems Administration</h5>
+              <p class="card-text">Managing Windows/Linux servers, Active Directory, virtualization, user accounts, and network security for businesses.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Data Backup & Recovery -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/256/database.png" class="card-img-top circle-img" alt="Backup" />
+            <div class="card-body">
+              <h5 class="card-title">Data Backup & Recovery</h5>
+              <p class="card-text">Automated backups, disaster recovery planning, cloud storage, and secure restoration for critical business data.</p>
+            </div>
+          </div>
+        </div>
+        <!-- WordPress -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" class="card-img-top circle-img" alt="WordPress" />
+            <div class="card-body">
+              <h5 class="card-title">WordPress Development</h5>
+              <p class="card-text">Custom themes, plugins, SEO, eCommerce, and managed hosting for modern WordPress sites.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Graphics Design -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/256/adobe-photoshop.png" class="card-img-top circle-img" alt="Graphics" />
+            <div class="card-body">
+              <h5 class="card-title">Graphics Design</h5>
+              <p class="card-text">Professional branding, logos, banners, posters, and social media graphics using Photoshop, Illustrator, Canva.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Microsoft 365 -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://images.seeklogo.com/logo-png/62/1/microsoft-365-copilot-logo-png_seeklogo-621257.png" class="card-img-top circle-img" alt="Microsoft 365" />
+            <div class="card-body">
+              <h5 class="card-title">Microsoft 365 Services</h5>
+              <p class="card-text">Setup, migration, and management of Microsoft 365 for businesses—email, Teams, SharePoint, OneDrive, and security.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Web Hosting & Management -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/96/cloud-server.png" class="card-img-top circle-img" alt="Web Hosting" />
+            <div class="card-body">
+              <h5 class="card-title">Web Hosting & Management</h5>
+              <p class="card-text">Reliable hosting, server setup, SSL, website maintenance, domain management, and 24/7 monitoring for your websites.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Web Development -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="card-img-top circle-img" alt="Web Dev" />
+            <div class="card-body">
+              <h5 class="card-title">Custom Web Development</h5>
+              <p class="card-text">Fast, scalable, and responsive sites/apps using React, Node.js, Next.js, and best UI/UX design practices.</p>
+            </div>
+          </div>
+        </div>
+        <!-- API Design -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" class="card-img-top circle-img" alt="APIs" />
+            <div class="card-body">
+              <h5 class="card-title">API Design & Integration</h5>
+              <p class="card-text">Secure RESTful and GraphQL API design, integration, and business workflow automation.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Cybersecurity -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/256/security-checked.png" class="card-img-top circle-img" alt="Security" />
+            <div class="card-body">
+              <h5 class="card-title">Cybersecurity & Auditing</h5>
+              <p class="card-text">Security assessments, penetration testing, vulnerability management, and compliance standards.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Database Solutions -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="card-img-top circle-img" alt="Database" />
+            <div class="card-body">
+              <h5 class="card-title">Database Solutions</h5>
+              <p class="card-text">Design & optimization of SQL/NoSQL databases (MongoDB, PostgreSQL, MySQL), backup strategies, tuning.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile App Dev -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="card-img-top circle-img" alt="Mobile" />
+            <div class="card-body">
+              <h5 class="card-title">Mobile App Development</h5>
+              <p class="card-text">Cross-platform mobile apps (Flutter, React Native) with robust backend integration and appealing UI/UX.</p>
+            </div>
+          </div>
+        </div>
+        <!-- IT Support -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/256/customer-support.png" class="card-img-top circle-img" alt="IT Support" />
+            <div class="card-body">
+              <h5 class="card-title">IT Support & Maintenance</h5>
+              <p class="card-text">Ongoing IT support, troubleshooting, software updates, and system monitoring for organizations.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Training -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/256/classroom.png" class="card-img-top circle-img" alt="Training" />
+            <div class="card-body">
+              <h5 class="card-title">Technical Training & Mentoring</h5>
+              <p class="card-text">Upskill your teams with workshops, code reviews, and best practices in networking and software engineering.</p>
+            </div>
+          </div>
+        </div>
+        <!-- E-Commerce -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/256/shopping-cart-loaded.png" class="card-img-top circle-img" alt="E-Commerce" />
+            <div class="card-body">
+              <h5 class="card-title">E-Commerce Solutions</h5>
+              <p class="card-text">Secure, conversion-optimized online stores and payment systems (Shopify, WooCommerce, Stripe integration).</p>
+            </div>
+          </div>
+        </div>
+        <!-- Data Analytics -->
+        <div class="col">
+          <div class="card service-card h-100">
+            <img src="https://img.icons8.com/color/256/combo-chart--v2.png" class="card-img-top circle-img" alt="Analytics" />
+            <div class="card-body">
+              <h5 class="card-title">Data Analytics & Visualization</h5>
+              <p class="card-text">Turn data into insights with dashboards, reports, and visualization tools (Power BI, Tableau, D3.js).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="section-title">Skills</div>
+      <div class="skills">
+        <span class="skill">LAN/WAN</span>
+        <span class="skill">TCP/IP</span>
+        <span class="skill">Wi-Fi</span>
+        <span class="skill">VPN</span>
+        <span class="skill">Cisco/MikroTik</span>
+        <span class="skill">SDN</span>
+        <span class="skill">Firewall</span>
+        <span class="skill">Windows/Linux</span>
+        <span class="skill">Active Directory</span>
+        <span class="skill">Virtualization</span>
+        <span class="skill">Backup/Recovery</span>
+        <span class="skill">WordPress</span>
+        <span class="skill">Microsoft 365</span>
+        <span class="skill">Web Hosting</span>
+        <span class="skill">Photoshop/Illustrator</span>
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3/SASS</span>
+        <span class="skill">JavaScript (ES6+)</span>
+        <span class="skill">TypeScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Next.js</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">Express.js</span>
+        <span class="skill">MongoDB</span>
+        <span class="skill">PostgreSQL</span>
+        <span class="skill">Docker</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">AWS/Azure</span>
+        <span class="skill">Linux</span>
+        <span class="skill">CI/CD</span>
+        <span class="skill">Testing (Jest, Cypress)</span>
+        <span class="skill">Cybersecurity</span>
+        <span class="skill">REST/GraphQL APIs</span>
+        <span class="skill">Mobile (Flutter/React Native)</span>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact-info">
+        <div class="social-links">
+          <a class="social-link phone" href="tel:0780157449" title="Phone"><i class="fas fa-phone"></i></a>
+          <a class="social-link whatsapp" href="https://wa.me/256758844953" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a class="social-link tiktok" href="https://www.tiktok.com/@yetstechhub" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a class="social-link linkedin" href="https://www.linkedin.com/in/mumbere-deric-403273280/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a class="social-link gmail" href="mailto:mumberederic@gmail.com" title="Gmail">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" class="gmail-img" alt="Gmail Icon" />
+          </a>
+        </div>
+        <div style="margin-top:1.2rem;">
+          <strong>Email:</strong> <a href="mailto:yets256@gmail.com" style="color:#0d6efd;text-decoration:none;">yets256@gmail.com</a><br>
+          <strong>Location:</strong> Kampala, Uganda
+        </div>
+      </div>
+    </section>
   </div>
-
-      <p>&copy; 2023 <a href="https://yetstechhub256.github.io/yetstechhub/" target="_blank">Yets Tech Hub</a>. All rights reserved.</p>
-    </div>
+  <footer>
+    &copy; 2025 YetsTechHub256 &mdash; IT Specialist & Networking Expert<br>
+    <span>&lt;/&gt; Crafted with code and passion</span>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
